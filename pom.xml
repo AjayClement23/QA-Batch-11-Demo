@@ -56,6 +56,7 @@
             <version>${extentklov.version}</version>
         </dependency>
     </dependencies>
+
     <profiles>
         <profile>
             <id>unit-test</id>
@@ -70,7 +71,12 @@
                                 <suiteXmlFiles>
                                     <suiteXmlFile>unit-testng.xml</suiteXmlFile>
                                 </suiteXmlFiles>
+                                <gpgArguments>
+                                    <arg>--pinentry-mode</arg>
+                                    <arg>loopback</arg>
+                                </gpgArguments>
                             </configuration>
+
                         </plugin>
                     </plugins>
                 </pluginManagement>
@@ -89,6 +95,10 @@
                                 <suiteXmlFiles>
                                     <suiteXmlFile>testng.xml</suiteXmlFile>
                                 </suiteXmlFiles>
+                                <gpgArguments>
+                                    <arg>--pinentry-mode</arg>
+                                    <arg>loopback</arg>
+                                </gpgArguments>
                             </configuration>
                         </plugin>
                     </plugins>
