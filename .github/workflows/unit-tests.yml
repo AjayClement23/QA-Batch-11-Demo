@@ -1,7 +1,9 @@
 name: ohrm-unit-tests
 on:
   push:
-    branches: [main,local-work]
+    branches:
+     -main
+     -local-work
   pull_request:
     -main
     -local-work
