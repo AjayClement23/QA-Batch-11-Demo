@@ -8,10 +8,6 @@ on:
     -main
     -local-work
   workflow_dispatch:
-    inputs:
-      name:
-        description: "Enter the environment"
-        required: false
 
 jobs:
   build:
