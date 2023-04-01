@@ -20,15 +20,15 @@ jobs:
       - name: checkout latest
         uses: actions/checkout@v3
 
-      - name: install and setup JDK 17
+      - name: install and setup JDK 18
         uses: actions/setup-java@v3
         with:
-          java-version: 17
-          distribution: oracle
+          java-version: 18
+          distribution: microsoft
           settings-path: $GITHUB_WORKSPACE/settings.xml
 
       - name: Build project
-        run:  mvn clean install -X
+        run:  mvn clean install -Dmaven.test.skip -X
 
       - name: Run Unit tests
         run:  mvn clean test -Punit-test
