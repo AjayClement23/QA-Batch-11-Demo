@@ -5,7 +5,10 @@ on:
      -main
      -local-work
   pull_request:
-    types:[assigned, opened, synchronize, reopened]
+    types:
+      -opened
+    branches: 
+      -main
   workflow_dispatch:
 
 jobs:
