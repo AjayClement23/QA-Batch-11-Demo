@@ -4,9 +4,9 @@
     <test  name="LoginLogoutChrome">
         <parameter name="driverType" value="chrome"></parameter>
         <classes>
-            <class name="com.ttt.orangehrmtests.LoginTests">
+            <class name="com.ttt.orangehrmtests.UnitTest">
                 <methods>
-                    <include name="loginLogoutTest"/>
+                    <include name="checkCode"/>
                 </methods>
             </class>
         </classes>
