@@ -16,9 +16,7 @@ public final class ConfigDataManager {
     private static final Properties configProperties = new Properties();
     private static Hashtable<String,String> propertiesHashTbl = new Hashtable<>();
 
-    //static block -> will get executed when your class is loaded in your jvm
-    //IO -> FileInputStream, getClassLoader().getResourceAsStream(), FileReader, BufferedReader, BufferedWriter, File
-    static {
+     static {
         try(InputStream fis = ConfigDataManager.class.getClassLoader().getResourceAsStream("config.properties")){
              configProperties.load(fis);
              for(Map.Entry<Object,Object> map: configProperties.entrySet()){

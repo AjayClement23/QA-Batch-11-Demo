@@ -1,6 +1,6 @@
 package com.ttt.pages;
 
-import com.ttt.reportutils.ExtentReportLogger;
+
 import com.ttt.uielementutils.UiElementReusables;
 import com.ttt.uidriverutils.UiDriverManager;
 import org.openqa.selenium.By;
@@ -20,9 +20,7 @@ public final class CommonPage {
 
     public LoginPage logOut(){
         UiElementReusables.clickElement(driver,userAccountDrpDwnLoc);
-        ExtentReportLogger.reportInfo("logOut- Clicked User Account dropdown in header");
         UiElementReusables.clickElement(driver,logOutButtonLoc);
-        ExtentReportLogger.reportInfo("logOut- Clicked on logoutButton");
         return new LoginPage();
     }
 }

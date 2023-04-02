@@ -3,12 +3,10 @@ on:
   push:
     branches:
      -main
-     -local-work
   pull_request:
-    types:
-      -opened
-      -closed
-    branches: 
+    types:types: [ opened, synchronize ]
+
+    branches:
       -main
   workflow_dispatch:
 
