@@ -3,9 +3,9 @@ on:
   push:
     branches:
      -main
-  pull_request:
+     -local-work
+  pull_request_target:
     types:types: [ opened, synchronize ]
-
     branches:
       -main
   workflow_dispatch:
