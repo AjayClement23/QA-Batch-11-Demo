@@ -61,8 +61,12 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-http-jdk-client</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
     </dependencies>
-
     <profiles>
         <profile>
             <id>unit-test</id>
@@ -82,7 +86,6 @@
                                     <arg>loopback</arg>
                                 </gpgArguments>
                             </configuration>
-
                         </plugin>
                     </plugins>
                 </pluginManagement>

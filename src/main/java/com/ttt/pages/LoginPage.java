@@ -1,6 +1,6 @@
 package com.ttt.pages;
 
-import com.ttt.reportutils.ExtentReportLogger;
+
 import com.ttt.uielementutils.UiElementReusables;
 import com.ttt.uidriverutils.UiDriverManager;
 import org.openqa.selenium.By;
@@ -20,17 +20,13 @@ public final class LoginPage {
     }
     public CommonPage login(String userName, String password){
         UiElementReusables.enterInput(driver,userName,userNameLoc);
-        ExtentReportLogger.reportInfo("enterInput- Value Entered: "+userName);
         UiElementReusables.enterInput(driver,password,passwordLoc);
-        ExtentReportLogger.reportInfo("enterInput- Value Entered: "+password);
         UiElementReusables.clickElement(driver,loginButtonLoc);
-        ExtentReportLogger.reportInfo("clickElement- login button clicked");
         return  new CommonPage();
     }
     public String getLoginTitleText(){
         String actualText= UiElementReusables.getElementText(driver
                 ,loginTitleLoc);
-        ExtentReportLogger.reportInfo("getLoginTitleText- actual value: "+actualText);
         return actualText;
     }
 

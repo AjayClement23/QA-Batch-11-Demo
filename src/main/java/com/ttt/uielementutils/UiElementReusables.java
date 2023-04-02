@@ -11,17 +11,15 @@ import java.time.Duration;
 
 public final class UiElementReusables {
 
-   // private WebDriver driver;
+
     private UiElementReusables() {
-       // this.driver = UiDriverManager.getDriver();
+       
     }
 
     public static void enterInput(WebDriver driver, String inputText, By locator){
         UiWaitHandler.waitForElementToBeVisible(driver,
                         Duration.ofMillis(ConfigDataManager.getGlobalWaitTime()),locator, true)
                 .sendKeys(inputText);
-
-
     }
 
     public static void clickElement(WebDriver driver, By locator){

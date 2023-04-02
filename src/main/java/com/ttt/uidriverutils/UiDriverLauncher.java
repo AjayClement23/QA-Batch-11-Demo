@@ -17,10 +17,11 @@ public final class UiDriverLauncher {
 
     public static WebDriver  launchBrowser(DriverType browserDriverType){
         WebDriver driver;
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
         switch (browserDriverType){
             case CHROME:
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions copts = new ChromeOptions().addArguments("--remote-allow-origins=*");
+                ChromeOptions copts = new ChromeOptions();
                 driver = new ChromeDriver(copts);
                 break;
             case FIREFOX:
