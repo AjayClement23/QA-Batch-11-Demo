@@ -19,6 +19,8 @@
         <poi.version>5.2.3</poi.version>
         <poiooxml.version>5.2.3</poiooxml.version>
         <lombok.version>1.18.22</lombok.version>
+        <sonar.organization>ajayclement23</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
