@@ -13,7 +13,7 @@ public final class UiElementReusables {
 
 
     private UiElementReusables() {
-       
+
     }
 
     public static void enterInput(WebDriver driver, String inputText, By locator){
